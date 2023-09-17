@@ -1,8 +1,8 @@
 NAME := harlFilter
 
-CC := c++
+CXX := c++
 
-CXXFLAGS := -Wall -Werror -Wextra -std=c++98 -MMD
+CXXFLAGS := -Wall -Wextra -Werror -std=c++98 -MMD
 
 OBJ :=	main.o \
 	Harl.o
@@ -16,7 +16,7 @@ RM := rm -f
 #############################################################################
 
 $(NAME) : $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CXX) $(OBJ) -o $(NAME)
 
 all : $(NAME)
 
