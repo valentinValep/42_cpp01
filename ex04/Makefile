@@ -1,6 +1,6 @@
 NAME := replace
 
-CC := c++
+CXX := c++
 
 CXXFLAGS := -Wall -Werror -Wextra -std=c++98 -MMD
 
@@ -15,7 +15,7 @@ RM := rm -f
 #############################################################################
 
 $(NAME) : $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CXX) $(OBJ) -o $(NAME)
 
 all : $(NAME)
 
