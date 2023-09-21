@@ -27,9 +27,6 @@ int	replace(std::ifstream &ifs, std::ofstream &ofs, std::string s1, std::string 
 		else
 			ofs << file_contents[i];
 	}
-	(void)ofs;
-	(void)s1;
-	(void)s2;
 	return (0);
 }
 
@@ -42,6 +39,11 @@ int	main(int argc, char **argv)
 	if (argc != 4)
 	{
 		std::cout << "Usage: ./replace <filename> <string1> <string2>" << std::endl;
+		return (1);
+	}
+	if (argv[2][0] == '\0')
+	{
+		std::cout << "Error: string1 cannot be empty" << std::endl;
 		return (1);
 	}
 	ifs.open(argv[1]);
